@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "jsx": "react",
+    "target": "ES2020",
+    "module": "CommonJS",          // << important
+    "moduleResolution": "Node",
+    "outDir": "../dist-electron",
+    "rootDir": ".",
+    "sourceMap": true,
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "baseUrl": ".",
+    "paths": {
+      "~/*": ["./src/*"]
+    }
+  },
+  "include": ["./**/*","electron/**/*.ts"],
+  "exclude": ["node_modules", "dist", "dist-electron"]
+}

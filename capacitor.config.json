@@ -1,0 +1,5 @@
+{
+  "appId": "com.productreceiptapp.app",
+  "appName": "ProductReceiptApp",
+  "webDir": "dist/renderer"
+}
