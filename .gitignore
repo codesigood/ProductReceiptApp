@@ -8,10 +8,19 @@ pnpm-debug.log*
 lerna-debug.log*
 
 node_modules
+dist-electron
 dist
 dist-ssr
 *.local
-
+.env
+.env.*.local
+.cache
+.next
+out
+.nuxt
+.nuxt-storybook
+.storybook/dist 
+env
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
