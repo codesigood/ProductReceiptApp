@@ -1,1 +1,0 @@
-{"version":3,"file":"emailBackupIPC.js","sourceRoot":"","sources":["../../electron/ipc/emailBackupIPC.ts"],"names":[],"mappings":";;AAGA,wDAIC;AAPD,uCAAkC;AAClC,6EAAmE;AAEnE,SAAgB,sBAAsB;IACpC,kBAAO,CAAC,MAAM,CAAC,cAAc,EAAE,KAAK,IAAI,EAAE;QACxC,OAAO,MAAM,IAAA,uCAAe,GAAE,CAAA;IAChC,CAAC,CAAC,CAAA;AACJ,CAAC"}
