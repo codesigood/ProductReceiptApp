@@ -26,7 +26,15 @@
       "main": "dist-electron/main.js"
     },
     "win": {
-      "target": "nsis",
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64",
+            "ia32"
+          ]
+        }
+      ],
       "icon": "assets/icon.ico"
     },
     "nsis": {

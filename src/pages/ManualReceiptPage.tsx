@@ -96,6 +96,7 @@ const ManualReceiptPage = () => {
     const fetchCompanyProfileName = async () => {
       try {
         const response = await window.api.companyProfile.get(token);
+        console.log(" Company Profile response:", response.profile);
         if (response.success && response.profile) {
           setCompanyProfile(response.profile);
         }
@@ -131,7 +132,11 @@ const ManualReceiptPage = () => {
       setError("Please select a printer.");
       return;
     }
-
+    console.log(" Selected company profile:", companyProfile);
+    if (!companyProfile || Object.keys(companyProfile).length === 0) {
+      setError("Company profile is not set. Please configure it before printing.");
+      return;
+    }
     const receiptData = {
       companyProfile,
       name,
@@ -227,7 +232,12 @@ const ManualReceiptPage = () => {
       setError("Please select a printer before reprinting.");
       return;
     }
+console.log(" Receipt:", companyProfile);
 
+    if (!companyProfile || Object.keys(companyProfile).length === 0) {
+      setError("Company profile is not set. Please configure it before printing.");
+      return;
+    }
     const manualReceiptData = {
       companyProfile,
       cashier: receipt.sales_person,

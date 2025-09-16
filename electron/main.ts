@@ -26,6 +26,7 @@ function createWindow() {
   // Load app
   if (process.env.MAIN_WINDOW_VITE_DEV_SERVER_URL) {
     mainWindow.loadURL(process.env.MAIN_WINDOW_VITE_DEV_SERVER_URL);
+    mainWindow.webContents.openDevTools();
 
     // ✅ Only open DevTools in dev mode
     if (process.env.NODE_ENV === "development") {

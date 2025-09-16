@@ -40,13 +40,13 @@ export class PrinterService {
       pageSize: "58mm",
       boolean:false,
     };
-
+    
     const data: PosPrintData[] = [
       { type: "text", value: "Receipt", style: { textAlign: "center", fontWeight: "bold" } },
       { type: "text", value: "----------------------", style: { textAlign: "center" } },
-      { type: "text", value: ` ${receiptData.companyProfile?.name}`, style: { textAlign: "center", fontSize: "36" } },
-      { type: "text", value: ` ${receiptData.companyProfile?.phone}`, style: { textAlign: "center", fontSize: "36" } },
-      { type: "text", value: ` ${receiptData.companyProfile?.address}`, style: { textAlign: "center", fontSize: "36" } },
+      { type: "text", value: ` ${receiptData.companyProfile.name}`, style: { textAlign: "center", fontSize: "36" } },
+      { type: "text", value: ` ${receiptData.companyProfile.phone}`, style: { textAlign: "center", fontSize: "36" } },
+      { type: "text", value: ` ${receiptData.companyProfile.address}`, style: { textAlign: "center", fontSize: "36" } },
       { type: "text", value: "----------------------", style: { textAlign: "center" } },
       { type: "text", value: `Cashier: ${receiptData.cashier}`, style: { textAlign: "left" } },
       { type: "text", value: `Customer: ${receiptData.name}`, style: { textAlign: "left" } },
@@ -59,7 +59,7 @@ export class PrinterService {
       { type: "text", value: `Total: #${receiptData.amount}`, style: { textAlign: "left", fontWeight: "bold" } },
       { type: "text", value: "----------------------", style: { textAlign: "center" } },
     ];
-
+console.log(" Printing to company:", receiptData.companyProfile);
     try {
       const result = await PosPrinter.print(data, options);
       console.log("✅ Print job sent successfully:", result);
